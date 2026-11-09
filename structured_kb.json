@@ -1,0 +1,790 @@
+{
+  "kriteria": [
+    {
+      "kode": "C1",
+      "nama": "Usia ibu hamil",
+      "sub": "<20 tahun",
+      "bobot": 1.0,
+      "ket": "Risiko meningkat pada usia ekstrem"
+    },
+    {
+      "kode": "C1",
+      "nama": "Usia ibu hamil",
+      "sub": "20-35 tahun",
+      "bobot": 0.0,
+      "ket": "Kategori risiko rendah"
+    },
+    {
+      "kode": "C1",
+      "nama": "Usia ibu hamil",
+      "sub": ">35 tahun",
+      "bobot": 1.0,
+      "ket": "Risiko meningkat pada usia ekstrem"
+    },
+    {
+      "kode": "C2",
+      "nama": "Usia kehamilan",
+      "sub": "<20 minggu",
+      "bobot": 0.0,
+      "ket": "Menentukan hipertensi kronis vs gestasional"
+    },
+    {
+      "kode": "C2",
+      "nama": "Usia kehamilan",
+      "sub": "≥20 minggu",
+      "bobot": 1.0,
+      "ket": "Menentukan hipertensi kronis vs gestasional"
+    },
+    {
+      "kode": "C3",
+      "nama": "Tekanan darah sistolik",
+      "sub": "<140 mmHg",
+      "bobot": 0.0,
+      "ket": "Batas normal"
+    },
+    {
+      "kode": "C3",
+      "nama": "Tekanan darah sistolik",
+      "sub": "140-159 mmHg",
+      "bobot": 1.0,
+      "ket": "Hipertensi ringan-sedang"
+    },
+    {
+      "kode": "C3",
+      "nama": "Tekanan darah sistolik",
+      "sub": "≥160 mmHg",
+      "bobot": 2.0,
+      "ket": "Hipertensi berat"
+    },
+    {
+      "kode": "C4",
+      "nama": "Tekanan darah diastolik",
+      "sub": "<90 mmHg",
+      "bobot": 0.0,
+      "ket": "Batas normal"
+    },
+    {
+      "kode": "C4",
+      "nama": "Tekanan darah diastolik",
+      "sub": "90-109 mmHg",
+      "bobot": 1.0,
+      "ket": "Hipertensi ringan-sedang"
+    },
+    {
+      "kode": "C4",
+      "nama": "Tekanan darah diastolik",
+      "sub": "≥110 mmHg",
+      "bobot": 2.0,
+      "ket": "Hipertensi berat"
+    },
+    {
+      "kode": "C5",
+      "nama": "Proteinuria",
+      "sub": "Negatif",
+      "bobot": 0.0,
+      "ket": "Tidak ada protein dalam urine"
+    },
+    {
+      "kode": "C5",
+      "nama": "Proteinuria",
+      "sub": "+1 / +2",
+      "bobot": 1.0,
+      "ket": "Indikasi preeklampsia ringan"
+    },
+    {
+      "kode": "C5",
+      "nama": "Proteinuria",
+      "sub": "+3",
+      "bobot": 2.0,
+      "ket": "Indikasi preeklampsia berat"
+    },
+    {
+      "kode": "C6",
+      "nama": "Edema (bengkak)",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Bengkak tangan/kaki/wajah"
+    },
+    {
+      "kode": "C6",
+      "nama": "Edema (bengkak)",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Bengkak tangan/kaki/wajah"
+    },
+    {
+      "kode": "C7",
+      "nama": "Sakit kepala hebat",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Gejala preeklampsia berat"
+    },
+    {
+      "kode": "C7",
+      "nama": "Sakit kepala hebat",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Gejala preeklampsia berat"
+    },
+    {
+      "kode": "C8",
+      "nama": "Gangguan penglihatan",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Pandangan kabur/berkunang"
+    },
+    {
+      "kode": "C8",
+      "nama": "Gangguan penglihatan",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Pandangan kabur/berkunang"
+    },
+    {
+      "kode": "C9",
+      "nama": "Nyeri ulu hati (epigastrium)",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Gejala preeklampsia berat"
+    },
+    {
+      "kode": "C9",
+      "nama": "Nyeri ulu hati (epigastrium)",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Gejala preeklampsia berat"
+    },
+    {
+      "kode": "C10",
+      "nama": "Trombosit rendah (<100.000)",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Data laboratorium"
+    },
+    {
+      "kode": "C10",
+      "nama": "Trombosit rendah (<100.000)",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Data laboratorium"
+    },
+    {
+      "kode": "C11",
+      "nama": "Fungsi hati terganggu",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "SGOT/SGPT meningkat"
+    },
+    {
+      "kode": "C11",
+      "nama": "Fungsi hati terganggu",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "SGOT/SGPT meningkat"
+    },
+    {
+      "kode": "C12",
+      "nama": "Fungsi ginjal terganggu",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Kreatinin meningkat"
+    },
+    {
+      "kode": "C12",
+      "nama": "Fungsi ginjal terganggu",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Kreatinin meningkat"
+    },
+    {
+      "kode": "C13",
+      "nama": "Riwayat hipertensi sebelum hamil",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Riwayat penyakit"
+    },
+    {
+      "kode": "C13",
+      "nama": "Riwayat hipertensi sebelum hamil",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Riwayat penyakit"
+    },
+    {
+      "kode": "C14",
+      "nama": "Riwayat preeklampsia kehamilan sebelumnya",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Riwayat kehamilan"
+    },
+    {
+      "kode": "C14",
+      "nama": "Riwayat preeklampsia kehamilan sebelumnya",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Riwayat kehamilan"
+    },
+    {
+      "kode": "C15",
+      "nama": "Kejang",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Tanda eklampsia (gawat darurat)"
+    },
+    {
+      "kode": "C15",
+      "nama": "Kejang",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Tanda eklampsia (gawat darurat)"
+    },
+    {
+      "kode": "C16",
+      "nama": "Kehamilan kembar",
+      "sub": "Tidak",
+      "bobot": 0.0,
+      "ket": "Faktor risiko tambahan"
+    },
+    {
+      "kode": "C16",
+      "nama": "Kehamilan kembar",
+      "sub": "Ya",
+      "bobot": 1.0,
+      "ket": "Faktor risiko tambahan"
+    }
+  ],
+  "alternatif": [
+    {
+      "kode": "A1",
+      "nama": "Normal / tidak hipertensi",
+      "level_risiko": "Rendah",
+      "rekomendasi": "Pemeriksaan antenatal rutin sesuai jadwal"
+    },
+    {
+      "kode": "A2",
+      "nama": "Hipertensi Gestasional",
+      "level_risiko": "Sedang",
+      "rekomendasi": "Pantau tekanan darah berkala, kontrol lebih sering, edukasi tanda bahaya"
+    },
+    {
+      "kode": "A3",
+      "nama": "Hipertensi Kronis",
+      "level_risiko": "Sedang",
+      "rekomendasi": "Kontrol tekanan darah, evaluasi obat antihipertensi yang aman untuk kehamilan"
+    },
+    {
+      "kode": "A4",
+      "nama": "Preeklampsia Ringan",
+      "level_risiko": "Sedang-Tinggi",
+      "rekomendasi": "Rawat jalan intensif, cek proteinuria & lab berkala, edukasi tanda bahaya"
+    },
+    {
+      "kode": "A5",
+      "nama": "Preeklampsia Berat",
+      "level_risiko": "Tinggi",
+      "rekomendasi": "Rujuk segera ke fasilitas dengan fasilitas obstetri lengkap, pertimbangkan rawat inap"
+    },
+    {
+      "kode": "A6",
+      "nama": "Superimposed Preeclampsia",
+      "level_risiko": "Tinggi",
+      "rekomendasi": "Rujuk ke dokter spesialis kandungan, pemantauan ketat ibu dan janin"
+    },
+    {
+      "kode": "A7",
+      "nama": "Eklampsia",
+      "level_risiko": "Sangat Tinggi (gawat darurat)",
+      "rekomendasi": "Kegawatdaruratan - rujuk SEGERA, penanganan kejang, stabilisasi ibu dan janin"
+    }
+  ],
+  "rules": [
+    {
+      "kode": "R1",
+      "if": "C2≥20 minggu AND C3≥140 AND C4≥90 AND C5=Negatif AND C13=Tidak",
+      "then": "A2 - Hipertensi Gestasional",
+      "ket": "Hipertensi baru muncul setelah 20 minggu tanpa proteinuria"
+    },
+    {
+      "kode": "R2",
+      "if": "C2<20 minggu AND C3≥140 AND C4≥90",
+      "then": "A3 - Hipertensi Kronis",
+      "ket": "Hipertensi sudah ada sebelum usia kehamilan 20 minggu"
+    },
+    {
+      "kode": "R3",
+      "if": "C2≥20 minggu AND C3≥140 AND C4≥90 AND C5≥+1",
+      "then": "A4 - Preeklampsia Ringan",
+      "ket": "Hipertensi disertai proteinuria setelah 20 minggu"
+    },
+    {
+      "kode": "R4",
+      "if": "A4 terpenuhi AND (C3≥160 OR C4≥110) AND (C7 OR C8 OR C9 OR C10 OR C11 OR C12)",
+      "then": "A5 - Preeklampsia Berat",
+      "ket": "Preeklampsia ringan berkembang dengan tekanan darah sangat tinggi dan/atau gejala berat (relasi OR pada gejala)"
+    },
+    {
+      "kode": "R5",
+      "if": "A5 terpenuhi AND C15=Ya",
+      "then": "A7 - Eklampsia",
+      "ket": "Preeklampsia berat disertai kejang - kondisi gawat darurat"
+    },
+    {
+      "kode": "R6",
+      "if": "C13=Ya AND C2≥20 minggu AND C5≥+1 (baru muncul)",
+      "then": "A6 - Superimposed Preeclampsia",
+      "ket": "Ibu dengan riwayat hipertensi kronis mengalami proteinuria baru"
+    }
+  ],
+  "simulasi": [
+    {
+      "no": 1,
+      "usia_kehamilan": "25",
+      "sistolik": "120",
+      "diastolik": "75",
+      "proteinuria": "Negatif",
+      "sakit_kepala": "Tidak",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Normal / tidak hipertensi",
+      "level_risiko": "Rendah",
+      "rekomendasi": "Pemeriksaan antenatal rutin sesuai jadwal"
+    },
+    {
+      "no": 2,
+      "usia_kehamilan": "28",
+      "sistolik": "145",
+      "diastolik": "95",
+      "proteinuria": "Negatif",
+      "sakit_kepala": "Tidak",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Hipertensi Gestasional",
+      "level_risiko": "Sedang",
+      "rekomendasi": "Pantau tekanan darah berkala, kontrol lebih sering, edukasi tanda bahaya"
+    },
+    {
+      "no": 3,
+      "usia_kehamilan": "12",
+      "sistolik": "150",
+      "diastolik": "95",
+      "proteinuria": "Negatif",
+      "sakit_kepala": "Tidak",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Hipertensi Kronis",
+      "level_risiko": "Sedang",
+      "rekomendasi": "Kontrol tekanan darah, evaluasi obat antihipertensi yang aman untuk kehamilan"
+    },
+    {
+      "no": 4,
+      "usia_kehamilan": "30",
+      "sistolik": "148",
+      "diastolik": "92",
+      "proteinuria": "+1/+2",
+      "sakit_kepala": "Tidak",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Preeklampsia Ringan",
+      "level_risiko": "Sedang-Tinggi",
+      "rekomendasi": "Rawat jalan intensif, cek proteinuria & lab berkala, edukasi tanda bahaya"
+    },
+    {
+      "no": 5,
+      "usia_kehamilan": "34",
+      "sistolik": "165",
+      "diastolik": "115",
+      "proteinuria": "+3",
+      "sakit_kepala": "Ya",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Preeklampsia Berat",
+      "level_risiko": "Tinggi",
+      "rekomendasi": "Rujuk segera ke fasilitas dengan fasilitas obstetri lengkap, pertimbangkan rawat inap"
+    },
+    {
+      "no": 6,
+      "usia_kehamilan": "26",
+      "sistolik": "150",
+      "diastolik": "95",
+      "proteinuria": "+1/+2",
+      "sakit_kepala": "Tidak",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Ya",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Superimposed Preeclampsia",
+      "level_risiko": "Tinggi",
+      "rekomendasi": "Rujuk ke dokter spesialis kandungan, pemantauan ketat ibu dan janin"
+    },
+    {
+      "no": 7,
+      "usia_kehamilan": "37",
+      "sistolik": "170",
+      "diastolik": "120",
+      "proteinuria": "+3",
+      "sakit_kepala": "Ya",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Ya",
+      "hasil_diagnosis": "Eklampsia",
+      "level_risiko": "Sangat Tinggi (gawat darurat)",
+      "rekomendasi": "Kegawatdaruratan - rujuk SEGERA, penanganan kejang, stabilisasi ibu dan janin"
+    },
+    {
+      "no": 8,
+      "usia_kehamilan": "32",
+      "sistolik": "152",
+      "diastolik": "98",
+      "proteinuria": "3",
+      "sakit_kepala": "Ya",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Preeklampsia Ringan",
+      "level_risiko": "Sedang-Tinggi",
+      "rekomendasi": "Rawat jalan intensif, cek proteinuria & lab berkala, edukasi tanda bahaya"
+    },
+    {
+      "no": 9,
+      "usia_kehamilan": "20",
+      "sistolik": "123",
+      "diastolik": "100",
+      "proteinuria": "4",
+      "sakit_kepala": "Tidak",
+      "gangguan_penglihatan": "Ya",
+      "nyeri_ulu_hati": "Tidak",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Normal / tidak hipertensi",
+      "level_risiko": "Rendah",
+      "rekomendasi": "Pemeriksaan antenatal rutin sesuai jadwal"
+    },
+    {
+      "no": 10,
+      "usia_kehamilan": "25",
+      "sistolik": "150",
+      "diastolik": "76",
+      "proteinuria": "5",
+      "sakit_kepala": "Ya",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Ya",
+      "trombosit_rendah": "Ya",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Tidak",
+      "riwayat_hipertensi": "Ya",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Superimposed Preeclampsia",
+      "level_risiko": "Tinggi",
+      "rekomendasi": "Rujuk ke dokter spesialis kandungan, pemantauan ketat ibu dan janin"
+    },
+    {
+      "no": 11,
+      "usia_kehamilan": "42",
+      "sistolik": "200",
+      "diastolik": "120",
+      "proteinuria": "5",
+      "sakit_kepala": "Ya",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Ya",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Ya",
+      "riwayat_hipertensi": "Tidak",
+      "kejang": "Ya",
+      "hasil_diagnosis": "Eklampsia",
+      "level_risiko": "Sangat Tinggi (gawat darurat)",
+      "rekomendasi": "Kegawatdaruratan - rujuk SEGERA, penanganan kejang, stabilisasi ibu dan janin"
+    },
+    {
+      "no": 12,
+      "usia_kehamilan": "32",
+      "sistolik": "190",
+      "diastolik": "130",
+      "proteinuria": "6",
+      "sakit_kepala": "Ya",
+      "gangguan_penglihatan": "Tidak",
+      "nyeri_ulu_hati": "Ya",
+      "trombosit_rendah": "Tidak",
+      "fungsi_hati": "Tidak",
+      "fungsi_ginjal": "Ya",
+      "riwayat_hipertensi": "Ya",
+      "kejang": "Tidak",
+      "hasil_diagnosis": "Preeklampsia Berat",
+      "level_risiko": "Tinggi",
+      "rekomendasi": "Rujuk segera ke fasilitas dengan fasilitas obstetri lengkap, pertimbangkan rawat inap"
+    },
+    {
+      "no": 13,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 14,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 15,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 16,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 17,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 18,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 19,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 20,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 21,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 22,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 23,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 24,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    },
+    {
+      "no": 25,
+      "usia_kehamilan": "",
+      "sistolik": "",
+      "diastolik": "",
+      "proteinuria": "",
+      "sakit_kepala": "",
+      "gangguan_penglihatan": "",
+      "nyeri_ulu_hati": "",
+      "trombosit_rendah": "",
+      "fungsi_hati": "",
+      "fungsi_ginjal": "",
+      "riwayat_hipertensi": "",
+      "kejang": "",
+      "hasil_diagnosis": null,
+      "level_risiko": "-",
+      "rekomendasi": "-"
+    }
+  ]
+}
