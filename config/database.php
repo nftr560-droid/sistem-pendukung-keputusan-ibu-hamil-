@@ -4,11 +4,18 @@
  * SPKK Hipertensi Kehamilan (CDSS)
  */
 
-define('DB_HOST', 'localhost');
-define('DB_PORT', '3306');
-define('DB_NAME', 'spkk_hipertensi');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// Support environment variables from Railway, Cloud, or fallback to Laragon localhost
+$envHost = getenv('DB_HOST') ?: (getenv('MYSQLHOST') ?: 'localhost');
+$envPort = getenv('DB_PORT') ?: (getenv('MYSQLPORT') ?: '3306');
+$envName = getenv('DB_NAME') ?: (getenv('MYSQLDATABASE') ?: 'spkk_hipertensi');
+$envUser = getenv('DB_USER') ?: (getenv('MYSQLUSER') ?: 'root');
+$envPass = getenv('DB_PASS') !== false ? getenv('DB_PASS') : (getenv('MYSQLPASSWORD') !== false ? getenv('MYSQLPASSWORD') : '');
+
+define('DB_HOST', $envHost);
+define('DB_PORT', $envPort);
+define('DB_NAME', $envName);
+define('DB_USER', $envUser);
+define('DB_PASS', $envPass);
 
 function getDBConnection() {
     static $pdo = null;
@@ -22,14 +29,14 @@ function getDBConnection() {
         try {
             $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
         } catch (PDOException $e) {
-            // Attempt to connect without dbname and create it if missing
+            // Attempt to connect without dbname and create it if missing (useful on localhost/Laragon)
             try {
                 $rootDsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";charset=utf8mb4";
                 $rootPdo = new PDO($rootDsn, DB_USER, DB_PASS, $options);
                 $rootPdo->exec("CREATE DATABASE IF NOT EXISTS `" . DB_NAME . "` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
                 $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
             } catch (PDOException $ex) {
-                die("Koneksi Database Gagal: " . $ex->getMessage());
+                die("Koneksi Database Gagal: " . $e->getMessage() . " (Host: " . DB_HOST . ", DB: " . DB_NAME . ")");
             }
         }
     }

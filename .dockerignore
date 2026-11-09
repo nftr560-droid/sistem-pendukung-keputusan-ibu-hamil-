@@ -1,0 +1,12 @@
+.git
+.github
+jalankan-ngrok.bat
+set-authtoken.bat
+*.xlsx
+extract_kb.py
+test_diagnosis.py
+test_db.php
+excel_dump.json
+excel_summary.md
+structured_kb.json
+
